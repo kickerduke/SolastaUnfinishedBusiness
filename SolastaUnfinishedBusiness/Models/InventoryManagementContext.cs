@@ -133,7 +133,7 @@ internal static class InventoryManagementContext
         // adds the by sort group
 
         by.name = "SortGroup";
-        by.transform.localPosition = new Vector3(-302f, 370f, 0f);
+        by.transform.localPosition = new Vector3(-312f, 370f, 0f);
 
         BySortGroup.Inverted = false;
         BySortGroup.Selected = true;
@@ -194,14 +194,14 @@ internal static class InventoryManagementContext
         TaggedGuiDropdown.AddOptions(taggedOptions);
         TaggedGuiDropdown.template.sizeDelta = new Vector2(1f, 208f);
 
-        UnidentifiedToggle.transform.localPosition = new Vector3(-162f, 330f, 0f);
+        UnidentifiedToggle.transform.localPosition = new Vector3(-152f, 330f, 0f);
         UnidentifiedToggle.onValueChanged = new Toggle.ToggleEvent();
         UnidentifiedToggle.isOn = false;
         UnidentifiedToggle.onValueChanged.AddListener(delegate { Refresh(containerPanel); });
 
-        UnidentifiedText.GetComponentInChildren<TextMeshProUGUI>()
-            .SetText(Gui.Localize("UI/&InventoryFilterUnidentifiedMagical"));
-        UnidentifiedText.transform.localPosition = new Vector3(-332f, 340f, 0f);
+        UnidentifiedText.GetComponentInChildren<GuiLabel>()
+            .SetRawText(Gui.Localize("UI/&InventoryFilterUnidentifiedMagical"));
+        UnidentifiedText.transform.localPosition = new Vector3(-340f, 340f, 0f);
     }
 
     private static void ResetControls()
